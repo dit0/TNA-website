@@ -1,0 +1,171 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+
+body {
+  padding-top: 3rem;
+  color: #5a5a5a;
+  color: #5a5a5a;
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover{
+  color:#00243d;
+}
+.navbar-light .navbar-nav .nav-link{
+  color:rgba(0,36,61,.5);
+}
+.navbar .container .nav-item{
+  margin:0 1rem;
+}
+.section_title{
+  text-align: center;
+  color: #2a2a2e;
+  font-weight: 400;
+  font-size: 38px;
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+}
+.section_title:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  left: 0;
+  top: 50%;
+}
+
+.team,
+.contact{
+  padding:3rem 0;
+}
+.marketing .container{
+  padding: 3rem;
+}
+
+/* banner
+-------------------------------------------------- */
+
+
+.banner-inner{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 30rem;
+  background-color: #777;
+}
+.banner-caption {
+  margin-bottom: 4rem;
+  bottom: 3rem;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #00243d;
+  flex:1;
+  flex-basis: 80%;
+}
+.banner .container{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.banner-img{
+  flex:1;
+  flex-basis: 20%;
+}
+
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+.marketing .container{
+  background: #f4f4f4;
+  box-shadow: 0px 0px 5px rgba(0,0,0,.6);
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.marketing h2 {
+ 
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+nav.navbar {
+  background: #f4f4f4;
+  box-shadow: 0px 1px 4px rgba(0,0,0,.1);
+
+}
+.team {
+  background:url(../images/bg_team.png) no-repeat center center #f9f9ff;
+  border-top:1px solid #e1e1e1;
+  border-bottom:1px solid #e1e1e1;
+ 
+}
+.team .card:nth-child(2){
+  margin:0 1rem;
+}
+.team .card .card-title{
+  text-align: center;
+  font-size: 34px;
+
+}
+.team .card .card-body{
+  padding:1rem;
+}
+.team .card p{
+  text-align: justify;  
+}
+footer{
+  background: #0591aa;
+  color:#fff;
+}
+footer p{
+  margin:0;
+  padding: 0;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .banner-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
