@@ -28,7 +28,7 @@ body {
   font-size: 38px;
   position: relative;
   width: 500px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 .section_title:before{
   content: "";
@@ -92,21 +92,20 @@ body {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.marketing h2 {
- 
-}
+
 .marketing .col-lg-4 p {
   margin-right: .75rem;
   margin-left: .75rem;
 }
-
+.lead{
+  font-size:1.15rem;
+}
 
 /* Featurettes
 ------------------------- */
 
 
-/* Thin out the marketing headings */
-.featurette-heading {
+.feature-heading {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -.05rem;
@@ -123,9 +122,26 @@ nav.navbar {
   border-bottom:1px solid #e1e1e1;
  
 }
+.card-group{
+  padding-top:6rem;
+}
+.team .card{
+  position: relative;
+  padding-top:5rem;
+}
 .team .card:nth-child(2){
   margin:0 1rem;
 }
+.team_pic{
+  margin:0 auto;
+  margin-bottom: 1rem;
+  position: absolute;
+  left: 50%;
+  top:-75px;
+  transform: translateX(-50%);
+  background: #000;
+}
+
 .team .card .card-title{
   text-align: center;
   font-size: 34px;
@@ -148,24 +164,24 @@ footer p{
 
 
 
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 40em) {
-  /* Bump up size of carousel content */
   .banner-caption p {
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
     line-height: 1.4;
   }
   
-  .featurette-heading {
-    font-size: 50px;
+  .feature-heading {
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 62em) {
-  .featurette-heading {
+  .feature-heading {
     margin-top: 7rem;
   }
 }
