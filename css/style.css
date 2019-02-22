@@ -1,8 +1,24 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
 
+.cf:before,
+.cf:after {
+  content: " "; 
+  display: table; 
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+ .cf {
+  *zoom: 1;
+}
 body {
   padding-top: 3rem;
   color: #5a5a5a;
@@ -30,6 +46,7 @@ body {
   width: 500px;
   margin: 2rem auto;
 }
+
 .section_title:before{
   content: "";
   position: absolute;
@@ -37,26 +54,29 @@ body {
   border-bottom: 1px solid #000;
   left: 0;
   top: 50%;
+  z-index: 0;
 }
 
 .team,
 .contact{
   padding:3rem 0;
 }
-.marketing .container{
-  padding: 3rem;
-}
+
 
 /* banner
 -------------------------------------------------- */
 
-
+.banner{
+  /*background: url(../images/bg_banner.jpg) no-repeat center center;*/
+  background: url(../images/bg_banner.png) no-repeat center center #fff;
+  background-size: cover;
+  border-bottom: 1px solid #e1e1e1;
+}
 .banner-inner{
   position: relative;
   width: 100%;
   overflow: hidden;
   height: 30rem;
-  background-color: #777;
 }
 .banner-caption {
   margin-bottom: 4rem;
@@ -82,10 +102,16 @@ body {
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
-
 .marketing .container{
   background: #f4f4f4;
   box-shadow: 0px 0px 5px rgba(0,0,0,.6);
+  padding: 3rem;
+
+}
+.marketing .section_title span{
+  background: #f4f4f4;
+  position: relative;
+  padding: 1rem;
 }
 
 .marketing .col-lg-4 {
@@ -120,7 +146,11 @@ nav.navbar {
   background:url(../images/bg_team.png) no-repeat center center #f9f9ff;
   border-top:1px solid #e1e1e1;
   border-bottom:1px solid #e1e1e1;
- 
+}
+.team .section_title span{
+  background: #f9f9ff;
+  position: relative;
+  padding: 1rem;
 }
 .card-group{
   padding-top:6rem;
@@ -128,6 +158,8 @@ nav.navbar {
 .team .card{
   position: relative;
   padding-top:5rem;
+  box-shadow: 1px 2px 5px rgba(0,0,0,.2);
+  border-radius: 8px!important;
 }
 .team .card:nth-child(2){
   margin:0 1rem;
@@ -139,28 +171,97 @@ nav.navbar {
   left: 50%;
   top:-75px;
   transform: translateX(-50%);
-  background: #000;
+  border:1px solid #e1e1e1;
+  box-shadow: 1px 2px 3px rgba(0,0,0,.3);
 }
-
 .team .card .card-title{
   text-align: center;
   font-size: 34px;
-
 }
 .team .card .card-body{
   padding:1rem;
+  display: flex;
+  flex-direction: column;
 }
 .team .card p{
   text-align: justify;  
 }
+.team .card p:last-of-type{
+  text-align: center;
+  margin-top:auto;
+}
+.team .social{
+  width: 28px;
+  height: 27px;
+  display: inline-block;
+  margin:0 .5rem;
+  text-indent: -9999px;
+}
+.team .social.instagram{
+  background: url(../images/instagram_team.svg) no-repeat center center;
+}
+.team .social.linkedin{
+  background: url(../images/linkedin_team.svg) no-repeat center center;
+}
+.team .social.facebook{
+  background: url(../images/facebook_team.svg) no-repeat center center;
+}
+.contact .section_title span{
+  background: #fff;
+  position: relative;
+  padding: 1rem;
+}
+.contact p{
+  text-align: center;
+  margin:2rem 0;
+}
+.contact .row{
+  margin-bottom: 2rem;
+}
+
+.contact input,
+.contact textarea{
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  outline: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  background-color: transparent;
+  margin-top:1rem;
+}
+.contact input:focus,
+.contact textarea:focus{
+  box-shadow: 0 1px 0 0 #4285f4;
+  border-bottom: 1px solid #4285f4;
+}
 footer{
   background: #0591aa;
   color:#fff;
+  padding: .3rem 0 0;
+
 }
 footer p{
   margin:0;
-  padding: 0;
 }
+footer .linkedin_ft,
+footer .facebook_ft{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  color:#fff;
+  text-indent: -9999px;
+  background-size: 20px 20px;
+  margin:0 0 0 .5rem ;
+
+}
+.linkedin_ft{
+  background: url(../images/linkedin_footer.svg) no-repeat center center;
+}
+.facebook_ft{
+  background: url(../images/facebook_footer.svg) no-repeat center center;
+}
+
 
 
 
